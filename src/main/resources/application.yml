@@ -1,9 +1,11 @@
 spring:
-  datasource:
-    url: jdbc:postgresql://localhost:5432/spring-template
-    username: davi_admin
-    password: root
-    driver-class-name: org.postgresql.Driver
+  data:
+    mongodb:
+      host: ${MONGODB_HOST:localhost}
+      port: ${MONGODB_PORT:27017}
+      database: ${MONGODB_DATABASE:order-management}
+      username: ${MONGODB_USERNAME:admin}
+      password: ${MONGODB_PASSWORD:admin}
   jpa:
     hibernate:
       ddl-auto: update
